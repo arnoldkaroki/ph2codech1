@@ -1,5 +1,6 @@
-
+// Importing React and the other hooks
 import React, { useState } from 'react';
+
 
 const TransactionForm = ({ onAddTransaction, transactionCount }) => {
   const [newTransaction, setNewTransaction] = useState({
@@ -9,22 +10,23 @@ const TransactionForm = ({ onAddTransaction, transactionCount }) => {
     date: '',
   });
 
+  // Function to handle input changes in the form
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setNewTransaction({ ...newTransaction, [name]: value });
   };
 
+  // Function to handle adding of a new transaction
   const handleAddClick = () => {
-
+    // Create a new transaction with a unique ID
     const numberedTransaction = { ...newTransaction, id: transactionCount + 1 };
-    
 
     onAddTransaction(numberedTransaction);
-
 
     setNewTransaction({ description: '', amount: '', category: '', date: '' });
   };
 
+  // Render the form with input fields and a button
   return (
     <div id='formholder'>
       <input className='formInput'
@@ -60,4 +62,5 @@ const TransactionForm = ({ onAddTransaction, transactionCount }) => {
   );
 };
 
+// Export the TransactionForm component
 export default TransactionForm;
