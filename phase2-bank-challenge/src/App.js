@@ -3,7 +3,6 @@ import TransactionTable from './TransactionTable';
 import TransactionForm from './TransactionForm';
 import SearchBar from "./SearchBar"
 import './App.css'
-import './App.css';
 
 const App = () => {
   const [transactions, setTransactions] = useState([]);
