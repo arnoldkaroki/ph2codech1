@@ -2,8 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import TransactionTable from './TransactionTable';
 import TransactionForm from './TransactionForm';
-import SearchBar from "./SearchBar"
-import './App.css'
+import SearchBar from "./SearchBar";
+import transactionsData from './data'; // Import the data file
+import './App.css';
 
 // Main component for the application
 const App = () => {
@@ -13,26 +14,8 @@ const App = () => {
 
   // Fetch transactions from the server when the component mounts
   useEffect(() => {
-    fetchTransactions();
+    setTransactions(transactionsData); // Set transactions from the imported data
   }, []);
-
-  // Function to fetch transactions from the db.json file
-  const fetchTransactions = async () => {
-    try {
-      const response = await fetch(' https://github.com/shawn-terence/phase-2codechallenge1/pull/new/gh-pages');
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-
-      // change the response into JSON and set the transactions in the state
-      const data = await response.json();
-      const transactionsArray = data.transactions || data;
-
-      setTransactions(transactionsArray);
-    } catch (error) {
-      console.error('Error fetching transactions:', error);
-    }
-  };
 
   // Function to handle adding a new transaction
   const handleAddTransaction = (newTransaction) => {
@@ -44,7 +27,8 @@ const App = () => {
   const filteredTransactions = transactions.filter((transaction) =>
     transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
-// components will be loaded in the return of the function
+
+  // components will be loaded in the return of the function
   return (
     <div id='parentdiv'>
       <div id='Siteheader'><h1>Flat ironBank</h1></div>
