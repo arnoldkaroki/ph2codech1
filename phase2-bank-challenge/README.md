@@ -5,7 +5,9 @@ The program is meant to allow a person to add a transactionto the list.
 2. git
 3. JSON Server
 ### project setup
-To run the code you will have to clone the repository into your computer.
+1. To run the code you will have to clone the repository into your computer.
+2. run the command json-server --watchdb.json
+3. run npm start to open the application
 
 # License&Author
 Terence
