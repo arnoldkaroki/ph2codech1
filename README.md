@@ -6,7 +6,7 @@ The program is meant to allow a person to add a transactionto the list.
 3. JSON Server
 ### project setup
 1. To run the code you will have to clone the repository into your computer.
-2. run the command json-server --watchdb.json
+2. cd to the project file
 3. run npm start to open the application
 
 # License&Author
