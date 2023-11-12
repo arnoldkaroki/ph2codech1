@@ -26,36 +26,36 @@ const TransactionForm = ({ onAddTransaction, transactionCount }) => {
   };
 
   return (
-    <div>
-      <input
+    <div id='formholder'>
+      <input className='formInput'
         type="text"
         placeholder="Description"
         name="description"
         value={newTransaction.description}
         onChange={handleInputChange}
       />
-      <input
+      <input className='formInput'
         type="number"
         placeholder="Amount"
         name="amount"
         value={newTransaction.amount}
         onChange={handleInputChange}
       />
-      <input
+      <input className='formInput'
         type="text"
         placeholder="Category"
         name="category"
         value={newTransaction.category}
         onChange={handleInputChange}
       />
-      <input
+      <input className='formInput'
         type="text"
         placeholder="Date"
         name="date"
         value={newTransaction.date}
         onChange={handleInputChange}
       />
-      <button onClick={handleAddClick}>Add Transaction</button>
+      <button id='transactionButton' onClick={handleAddClick}>Add Transaction</button>
     </div>
   );
 };

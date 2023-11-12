@@ -38,9 +38,10 @@ const App = () => {
   );
 
   return (
-    <div>
-      <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+    <div id='parentdiv'>
+      <div id='Siteheader'><h1>Flat ironBank</h1></div>
       <TransactionForm onAddTransaction={handleAddTransaction} />
+      <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
       <TransactionTable transactions={filteredTransactions} />
     </div>
   );

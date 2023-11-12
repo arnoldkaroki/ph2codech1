@@ -1,6 +1,59 @@
+
+.root{
+  height: 100vh;
+}
+#Siteheader{
+  display: flex;
+  align-items: center;
+  justify-content: center
+
+}
+
 body{
-  margin: 20px;
+  margin: 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+#tablerow{
+  border: 2px solid black;
+  margin-top: 10px;
+}
+.tablehead{
+  display: flexbox;
+  
+}
+.tabledata{
+  padding: 7px;
+  
+  
+}
+#searchbar{
+  height: 30px;
+  border-radius: 5px;
+}
+#searchdiv{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+
+}
+#formholder{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+  border: 1px solid black;
+  display: inline-block;
+}
+.formInput{
+  height: 30px;
+  margin-right:5px;
+}
+#transactionButton{
+  height: 32px;
+}
+#parentdiv{
+  width: 80vw;
+  padding: 30px;
+  margin: 20px;
 }
