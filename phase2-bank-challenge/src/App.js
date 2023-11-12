@@ -19,7 +19,7 @@ const App = () => {
   // Function to fetch transactions from the db.json file
   const fetchTransactions = async () => {
     try {
-      const response = await fetch('http://localhost:8001/transactions');
+      const response = await fetch(' https://github.com/shawn-terence/phase-2codechallenge1/pull/new/gh-pages');
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
